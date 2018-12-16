@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Upload Care</title>
+
+
+    <link rel="stylesheet" href="{{request.basepath }}/css/app.css">
+      {# <link rel="stylesheet" href="css/app.css"> #}
+
+    <script>
+    UPLOADCARE_LIVE = false; // This helps during development but when live turn it to true.
+    UPLOADCARE_PUBLIC_KEY = '3729c2cf5697fc3ed780';
+    UPLOADCARE_EFFECTS = 'crop,rotate,enhance,blur';
+    UPLOADCARE_IMAGES_ONLY = true;
+
+
+    </script>
+
+{{app.uploadcare.widget.getScriptTag | raw}}
+
+  </head>
+  <body>
+
+  <div class="container">
+
+{% block main %}{% endblock %}
+
+  </div>
+
+{% block script%}
+
+{% endblock %}
+
+  </body>
+</html>

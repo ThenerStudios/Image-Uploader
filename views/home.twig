@@ -1,0 +1,27 @@
+{% extends 'template/app.twig' %}
+
+{% block main %}
+
+<form class="Upload-form" action="{{ url ('image.upload') }}" method="post">
+
+  {{app.uploadcare.widget.getInputTag('file_id') | raw}}
+
+  <button type="submit" class="upload-form__button">Upload</button>
+
+</form>
+
+{% endblock %}
+
+{% block scripts %}
+
+<script>
+  var  widget = uploadcare.SingleWidget('[role=uploadcare-uploader]');
+
+  widget.onUploadComplete(function ()
+{
+  document.querySelector('.upload-form__button').style = 'display: inline-block';
+});
+
+</script>
+
+{% endblock %}

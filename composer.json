@@ -1,0 +1,15 @@
+{
+    "require": {
+        "silex/silex": "^2.0",
+        "twig/twig": "^2.5",
+        "doctrine/dbal": "^2.9",
+        "uploadcare/uploadcare-php": "^2.2",
+        "symfony/asset": "^3.4",
+        "symfony/twig-bridge": "^3.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "AI\\": "app"
+          }
+    }
+}
